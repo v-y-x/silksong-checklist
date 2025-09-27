@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="percentCalculate(), loadStyles()">
+    <div class="header">
+        <h1>Total Completion</h1>
+        <h2 id="percent"></h2>
+    </div>
+    <div class="globalBlock">
+        <div class="weaponBlock blockStyle">
+            <h3>Needle Upgrades</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="1">
+                    <a id="box1" href="https://hollowknight.wiki/w/Needle">Sharpened Needle</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="2">
+                    <a id="box2" href="https://hollowknight.wiki/w/Needle">Shining Needle</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="3">
+                    <a id="box3" href="https://hollowknight.wiki/w/Needle">Hivesteel Needle</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="4">
+                    <a id="box4" href="https://hollowknight.wiki/w/Needle">Pale Steel Needle</a>
+                </span>
+            </div>
+        </div>
+        <div class="masksBlock blockStyle">
+            <h3>Ancient Masks</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="5">
+                    <a id="box5" href="https://hollowknight.wiki/w/Mask_Shard_(Silksong)">Mask 1</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="6">
+                    <a id="box6" href="https://hollowknight.wiki/w/Mask_Shard_(Silksong)">Mask 2</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="7">
+                    <a id="box7" href="https://hollowknight.wiki/w/Mask_Shard_(Silksong)">Mask 3</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="8">
+                    <a id="box8" href="https://hollowknight.wiki/w/Mask_Shard_(Silksong)">Mask 4</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="9">
+                    <a id="box9" href="https://hollowknight.wiki/w/Mask_Shard_(Silksong)">Mask 5</a>
+                </span>
+            </div>
+        </div>
+        <div class="spoolsBlock blockStyle">
+            <h3>Silk Spools</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="10">
+                    <a id="box10" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 1</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="11">
+                    <a id="box11" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 2</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="12">
+                    <a id="box12" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 3</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="13">
+                    <a id="box13" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 4</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="14">
+                    <a id="box14" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 5</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="15">
+                    <a id="box15" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 6</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="16">
+                    <a id="box16" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 7</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="17">
+                    <a id="box17" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 8</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="18">
+                    <a id="box18" href="https://hollowknight.wiki/w/Spool_Fragment">Spool 9</a>
+                </span>
+            </div>
+        </div>
+        <div class="heartsBlock blockStyle">
+            <h3>Silk Hearts</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="19">
+                    <a id="box19" href="https://hollowknight.wiki/w/Silk_Heart">Silk Heart 1</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="20">
+                    <a id="box20" href="https://hollowknight.wiki/w/Silk_Heart">Silk Heart 2</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="21">
+                    <a id="box21" href="https://hollowknight.wiki/w/Silk_Heart">Silk Heart 3</a>
+                </span>
+            </div>
+        </div>
+        <div class="crestsBlock blockStyle">
+            <h3>Crests</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="22">
+                    <a id="box22" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#Crests">Wanderer</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="44">
+                    <a id="box44" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#Crests">Reaper</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="45">
+                    <a id="box45" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#Crests">Beast</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="46">
+                    <a id="box46" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#Crests">Architect</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="47">
+                    <a id="box47" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#Crests">Witch</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="48">
+                    <a id="box48" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#Crests">Shaman</a>
+                </span>
+            </div>
+        </div>
+        <div class="skillBlock blockStyle">
+            <h3>Silk Skills</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="23">
+                    <a id="box23" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#List_of_Skills">Silk Spear</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="24">
+                    <a id="box24" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#List_of_Skills">Thread Storm</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="25">
+                    <a id="box25" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#List_of_Skills">Cross Stitch</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="26">
+                    <a id="box26" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#List_of_Skills">Sharp Dart</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="27">
+                    <a id="box27" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#List_of_Skills">Rune Rage</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="28">
+                    <a id="box28" href="https://hollowknight.wiki/w/Category:Crests_and_Skills#List_of_Skills">Pale Nails</a>
+                </span>
+            </div>
+        </div>
+        <div class="pouchBlock blockStyle">
+            <h3>Pouch & Kit Upgrades</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="29">
+                    <a id="box29" href="https://hollowknight.wiki/w/Crafting_Kit">Crafting Kit 1</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="30">
+                    <a id="box30" href="https://hollowknight.wiki/w/Crafting_Kit">Crafting Kit 2</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="31">
+                    <a id="box31" href="https://hollowknight.wiki/w/Crafting_Kit">Crafting Kit 3</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="32">
+                    <a id="box32" href="https://hollowknight.wiki/w/Crafting_Kit">Crafting Kit 4</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="33">
+                    <a id="box33" href="https://hollowknight.wiki/w/Tool_Pouch">Tool Pouch 1</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="34">
+                    <a id="box34" href="https://hollowknight.wiki/w/Tool_Pouch">Tool Pouch 2</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="35">
+                    <a id="box35" href="https://hollowknight.wiki/w/Tool_Pouch">Tool Pouch 3</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="36">
+                    <a id="box36" href="https://hollowknight.wiki/w/Tool_Pouch">Tool Pouch 4</a>
+                </span>
+            </div>
+        </div>
+        <div class="abilityBlock blockStyle">
+            <h3>Abilities</h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="37">
+                    <a id="box37" href="https://hollowknight.wiki/w/Clawline">Clawline</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="38">
+                    <a id="box38" href="https://hollowknight.wiki/w/Cling_Grip">Cling Grip</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="39">
+                    <a id="box39" href="https://hollowknight.wiki/w/Needle_Strike">Needle Strike</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="40">
+                    <a id="box40" href="https://hollowknight.wiki/w/Needolin">Needolin</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="41">
+                    <a id="box41" href="https://hollowknight.wiki/w/Silk_Soar">Silk Soar</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="42">
+                    <a id="box42" href="https://hollowknight.wiki/w/Swift_Step">Swift Step</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="43">
+                    <a id="box43" href="https://hollowknight.wiki/w/Sylphsong">Sylphsong</a>
+                </span>
+            </div>
+        </div>
+        <div class="redBlock blockStyle">
+            <h3><a href="https://hollowknight.wiki/w/Category:Tools#Red_Tools">Red Tools</a></h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="49">
+                    <a id="box49" href="https://hollowknight.wiki/w/Straight_Pin">Straight Pin</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="50">
+                    <a id="box50" href="https://hollowknight.wiki/w/Threefold_Pin">Threefold Pin</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="51">
+                    <a id="box51" href="https://hollowknight.wiki/w/Sting_Shard">Sting Shard</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="52">
+                    <a id="box52" href="https://hollowknight.wiki/w/Tacks">Tacks</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="53">
+                    <a id="box53" href="https://hollowknight.wiki/w/Longpin">Longpin</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="54">
+                    <a id="box54" href="https://hollowknight.wiki/w/Curveclaw">Curveclaw</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="55">
+                    <a id="box55" href="https://hollowknight.wiki/w/Curvesickle">Curvesickle</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="56">
+                    <a id="box56" href="https://hollowknight.wiki/w/Throwing_Ring">Throwing Ring</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="57">
+                    <a id="box57" href="https://hollowknight.wiki/w/Pimpillo">Pimpillo</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="58">
+                    <a id="box58" href="https://hollowknight.wiki/w/Conchcutter">Conchcutter</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="59">
+                    <a id="box59" href="https://hollowknight.wiki/w/Silkshot">Silkshot</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="60">
+                    <a id="box60" href="https://hollowknight.wiki/w/Delver's_Drill">Delver's Drill</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="61">
+                    <a id="box61" href="https://hollowknight.wiki/w/Cogwork_Wheel">Cogwork Wheel</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="62">
+                    <a id="box62" href="https://hollowknight.wiki/w/Cogfly">Cogfly</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="63">
+                    <a id="box63" href="https://hollowknight.wiki/w/Rosary_Cannon">Rosary Cannon</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="64">
+                    <a id="box64" href="https://hollowknight.wiki/w/Voltvessels">Voltvessels</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="65">
+                    <a id="box65" href="https://hollowknight.wiki/w/Flintslate">Flintslate</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="66">
+                    <a id="box66" href="https://hollowknight.wiki/w/Flea_Brew">Flea Brew</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="67">
+                    <a id="box67" href="https://hollowknight.wiki/w/Plasmium_Phial">Plasmium Phial</a>
+                </span>
+            </div>
+        </div>
+        <div class="blueBlock blockStyle">
+            <h3><a href="https://hollowknight.wiki/w/Category:Tools#Blue_Tools">Blue Tools</a></h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="68">
+                    <a id="box68" href="https://hollowknight.wiki/w/Druid's_Eye">Druid's Eye(s)</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="69">
+                    <a id="box69" href="https://hollowknight.wiki/w/Magma_Bell">Magma Bell</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="70">
+                    <a id="box70" href="https://hollowknight.wiki/w/Warding_Bell">Warding Bell</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="71">
+                    <a id="box71" href="https://hollowknight.wiki/w/Pollip_Pouch">Pollip Pouch</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="72">
+                    <a id="box72" href="https://hollowknight.wiki/w/Fractured_Mask">Fractured Mask</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="73">
+                    <a id="box73" href="https://hollowknight.wiki/w/Multibinder">Multibinder</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="74">
+                    <a id="box74" href="https://hollowknight.wiki/w/Weavelight">Weavelight</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="75">
+                    <a id="box75" href="https://hollowknight.wiki/w/Sawtooth_Circlet">Sawtooth Circlet</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="76">
+                    <a id="box76" href="https://hollowknight.wiki/w/Injector_Band">Injector Band</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="77">
+                    <a id="box77" href="https://hollowknight.wiki/w/Spool_Extender">Spool Extender</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="78">
+                    <a id="box78" href="https://hollowknight.wiki/w/Reserve_Bind">Reserve Bind</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="79">
+                    <a id="box79" href="https://hollowknight.wiki/w/Claw_Mirror">Claw Mirror(s)</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="80">
+                    <a id="box80" href="https://hollowknight.wiki/w/Memory_Crystal">Memory Crystal</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="81">
+                    <a id="box81" href="https://hollowknight.wiki/w/Snitch_Pick">Snitch Pick</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="82">
+                    <a id="box82" href="https://hollowknight.wiki/w/Volt_Filament">Volt Filament</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="83">
+                    <a id="box83" href="https://hollowknight.wiki/w/Quick_Sling">Quick Sling</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="84">
+                    <a id="box84" href="https://hollowknight.wiki/w/Wreath_of_Purity">Wreath of Purity</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="85">
+                    <a id="box85" href="https://hollowknight.wiki/w/Longclaw">Longclaw</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="86">
+                    <a id="box86" href="https://hollowknight.wiki/w/Wispfire_Lantern">Wispfire Lantern</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="87">
+                    <a id="box87" href="https://hollowknight.wiki/w/Egg_of_Flealia">Egg of Flealia</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="88">
+                    <a id="box88" href="https://hollowknight.wiki/w/Pin_Badge">Pin Badge</a>
+                </span>
+            </div>
+        </div>
+        <div class="yellowBlock blockStyle">
+            <h3><a href="https://hollowknight.wiki/w/Category:Tools#Yellow_Tools">Yellow Tools</a></h3>
+            <div class="flexStyle">
+                <span>
+                    <input class="check" type="checkbox" id="89">
+                    <a id="box89" href="https://hollowknight.wiki/w/Compass">Compass</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="90">
+                    <a id="box90" href="https://hollowknight.wiki/w/Shard_Pendant">Shard Pendant</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="91">
+                    <a id="box91" href="https://hollowknight.wiki/w/Magnetite_Brooch">Magnetite Brooch</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="92">
+                    <a id="box92" href="https://hollowknight.wiki/w/Weighted_Belt">Weighted Belt</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="93">
+                    <a id="box93" href="https://hollowknight.wiki/w/Barbed_Bracelet">Barbed Bracelet</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="94">
+                    <a id="box94" href="https://hollowknight.wiki/w/Dead_Bug's_Purse">Dead Bug's Purse</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="95">
+                    <a id="box95" href="https://hollowknight.wiki/w/Magnetite_Dice">Magnetite Dice</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="96">
+                    <a id="box96" href="https://hollowknight.wiki/w/Scuttlebrace">Scuttlebrace</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="97">
+                    <a id="box97" href="https://hollowknight.wiki/w/Ascendant's_Grip">Ascendant's Grip</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="98">
+                    <a id="box98" href="https://hollowknight.wiki/w/Spider_Strings">Spider Strings</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="99">
+                    <a id="box99" href="https://hollowknight.wiki/w/Silkspeed_Anklets">Silkspeed Anklets</a>
+                </span>
+                <span>
+                    <input class="check" type="checkbox" id="100">
+                    <a id="box100" href="https://hollowknight.wiki/w/Thief's_Mark">Thief's Mark</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="flowerBlock flexStyle">
+        <h3><a id="" href="https://hollowknight.wiki/w/Everbloom">Everbloom</a></h3>
+        <input type="checkbox" class="check" id="101">
+    </div>
+    <div class="footer">
+        <span class="foot">
+            <a href="">GitHub Repo</a>
+            <a href="">GitHub Profile</a>
+            <a href="">Twitter</a>
+            <a href="">Bluesky</a>
+        </span>
+        <span class="foot">
+            Credits to the<a href="https://hollowknight.wiki"><b>Hollow Knight Wiki</b></a>
+        </span>
+        <span class="foot">
+            Not affiliated with Team Cherry. Check out <a href="https://store.steampowered.com/developer/teamcherry"><b>Hollow Knight & Hollow Knight: Silksong</b></a>
+        </span>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
