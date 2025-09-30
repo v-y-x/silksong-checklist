@@ -76,3 +76,14 @@ span {
     justify-content: center;
     background-color: darkred;
 }
+
+.notif {
+    background: black;
+    color: white;
+    position: sticky;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    padding: 12px;
+    bottom: 0;
+}
